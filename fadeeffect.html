@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./code.jquery.com_jquery-3.7.1.min.js"></script>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            height: 100vh;
+            align-items: center;
+            margin: auto;
+            justify-content: center;
+            
+        }
+
+        #main{
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: black;
+            color: white;
+            border-radius: 15px;
+        }
+
+        #btns{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding: 10px;
+
+        }
+
+        button{
+            width: 60px;
+            height: 40px;
+            cursor: pointer;
+            background-color: limegreen;
+            border: none;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Heading</h1>
+        <div id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro inventore provident culpa earum quasi. Explicabo quo nesciunt magnam quis corrupti quam doloribus. Temporibus dignissimos sed animi sequi vel ab, iure quis nihil facilis qui unde illum ea laudantium quidem molestiae.</div>
+    </div>
+    <div id="btns">
+    <button id="btn1">Fade In</button>
+    <button id="btn2">Fade Out</button>
+    <button id="btn3">Fade Toggle</button>
+    <button id="btn4">Fade TO</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#btn2').click(function(){
+                $('#main').fadeOut();
+            })
+        })
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $('#main').fadeIn();
+            })
+        })
+        $(document).ready(function(){
+            $('#btn3').click(function(){
+                $('#main').fadeToggle('slow');
+            })
+        })
+        $(document).ready(function(){
+            $('#btn4').click(function(){
+                $('#main').fadeTo(500,0.2);
+            })
+        })
+    </script>
+</body>
+</html>
